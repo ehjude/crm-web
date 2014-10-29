@@ -3,12 +3,12 @@ class Rolodex
 
 	def initialize
 		@contacts = []
-		@id = 1
+		@index_id = 1
 	end
 
 	def add_contact(contact)
-		contact.id = @id
+		contact.id = @index_id
 		@contacts << contact 
-		id += 1
+		@index_id += 1
 	end
 end
