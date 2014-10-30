@@ -6,7 +6,13 @@
 		<input type="text" name="last_name" value="<%= @contact.last_name %>" placeholder="Last name">
 		<input type="text" name="email" value="<%= @contact.email %>" placeholder="Email">
 		<input type="text" name="note" value="<%= @contact.note %>" placeholder="Note">
-		<input type="submit" name="Submit" value="Create Contact" class="submit">
+		<input type="submit" name="Submit" value="Update Contact" class="button">
+	</form>
+
+	<br>
+	<form action="/contacts/<%= @contact.id %>" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" name="Delete" value="Delete" class="button delete">
 	</form>
 </div>
 

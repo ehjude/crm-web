@@ -168,12 +168,17 @@ form input {
 	font-size: 16px;
 }
 
-.submit {
+.button {
 	background: #c83b25;
 	color: white;
 	text-transform: uppercase;
 	font-size: 14px;
 }
+
+.delete { 
+	background: #4368a3;
+}
+
 
 /* 
   ==================
