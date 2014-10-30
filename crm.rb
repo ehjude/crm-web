@@ -4,6 +4,7 @@ require './contact'
 require './rolodex'
 
 $rolodex = Rolodex.new
+$rolodex.add_contact(Contact.new("Super", "Man", "superman@email.com", "He\'s super"))
 
 get '/' do 
 	@crm_app_name = "Super Cool CRM"
@@ -12,6 +13,11 @@ end
 
 get '/contacts' do 
 	erb :contacts 
+end
+
+get '/contacts/1' do
+	@contact = $rolodex.find(1)
+	erb :show_contact
 end
 
 get '/contact/new' do 

@@ -140,7 +140,8 @@ nav li a:hover {
 */
 
 .new_contact {
-	display: inline-block;
+	float: left;
+	width: 1000px;
 }
 
 .form {
@@ -170,6 +171,8 @@ form input {
 .submit {
 	background: #c83b25;
 	color: white;
+	text-transform: uppercase;
+	font-size: 14px;
 }
 
 /* 
