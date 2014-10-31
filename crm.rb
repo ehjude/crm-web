@@ -1,7 +1,13 @@
 require 'sinatra'
 require "sinatra/reloader" if development?
-require './contact' 
-require './rolodex'
+require_relative 'contact' 
+require_relative 'rolodex'
+require 'better_errors'
+
+configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = __dir__
+end
 
 $rolodex = Rolodex.new
 $rolodex.add_contact(Contact.new("Super", "Man", "superman@email.com", "He\'s super"))
@@ -24,7 +30,7 @@ get '/contacts/:id' do
 	end
 end
 
-get '/:id/edit' do
+get '/contacts/:id/edit' do
 	@contact = $rolodex.find(params[:id].to_i)
 	if @contact
 		erb :edit_contact

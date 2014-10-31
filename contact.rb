@@ -6,5 +6,4 @@ class Contact
 		@email = email
 		@note = note
 	end
-
 end

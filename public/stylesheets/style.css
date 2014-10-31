@@ -122,13 +122,16 @@ nav li:first-child {
 }
 
 nav li a {
-	color: #fa1679; 
-	text-decoration: none;
+	color: #fa1679;
 	font-size: 18px;
 	text-transform: uppercase;
 }
 
-nav li a:hover {
+a {
+	text-decoration: none;
+}
+
+a:hover {
 	color: #3673cf;	
 }
 
@@ -207,6 +210,11 @@ form input {
 	margin-right: 20px;
 }
 
+.contact_list td:nth-child(1) {
+	width: 30px;
+	font-size: 14px;
+}
+
 .contact_list td:nth-child(3) {
 	width: 300px;
 }
@@ -222,6 +230,10 @@ form input {
 	text-transform: uppercase;
 	font-size: 13px;
 	font-weight: bold;
+}
+
+.contact_list th:nth-child(1) {
+	width: 50px;
 }
 
 .contact_list tr:nth-child(even) {

@@ -3,6 +3,7 @@
 		<h1>Contact List</h1>
 		<thead>
 			<tr>
+				<th></th>
 				<th>First name</th>
 				<th>Last name</th>
 				<th>Email</th>
@@ -12,7 +13,8 @@
 		<tbody>
 			<% $rolodex.contacts.each do |contact| %>			
 				<tr>
-					<td><%= contact.first_name %></td>
+					<td><a href="/contacts/<%= contact.id %>/edit">EDIT</a></td>
+					<td><a href="/contacts/<%= contact.id %>"><%= contact.first_name %></a></td>
 					<td><%= contact.last_name %></td> 
 					<td><%= contact.email %></td> 
 					<td><%= contact.note %></td> 
