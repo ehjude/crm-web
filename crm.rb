@@ -1,6 +1,5 @@
 require 'sinatra'
 require "sinatra/reloader" if development? 
-require_relative 'rolodex'
 require 'better_errors'
 require 'data_mapper'
 
